@@ -6,6 +6,9 @@ baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're sit
 description: > # description of the site (multiple lines allowed)
   A (nearly) no-CSS, fast, minimalist Jekyll theme.
 
+lang: ko-KR
+timezone: Asia/Seoul
+
 permalink: /:slug.html
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
@@ -22,6 +25,18 @@ theme_config:
 sass:
   style: :compressed
 
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: "/categories/:name/"
+    tag: "/tags/:name/"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-archives
