@@ -92,3 +92,15 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+.post-item {
+  display: flex;
+  gap: 1em;
+}
+
+.post-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

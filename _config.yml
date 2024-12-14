@@ -9,7 +9,7 @@ description: > # description of the site (multiple lines allowed)
 lang: ko-KR
 timezone: Asia/Seoul
 
-permalink: /:slug.html
+permalink: /posts/:slug
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
 # goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
@@ -18,7 +18,7 @@ remote_theme: riggraz/no-style-please # if you are using GitHub Pages, change it
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
+  back_home_text: "home" # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: false # show blog description in home page
 
@@ -30,11 +30,11 @@ jekyll-archives:
     - categories
     - tags
   layouts:
-    category: archive
-    tag: archive
+    category: 'archive'
+    tag: 'archive'
   permalinks:
-    category: "/categories/:name/"
-    tag: "/tags/:name/"
+    category: '/categories/:name/'
+    tag: '/tags/:name/'
 
 plugins:
   - jekyll-feed

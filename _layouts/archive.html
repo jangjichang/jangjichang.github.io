@@ -4,6 +4,10 @@ layout: default
 
 {%-include back_link.html-%}
 
-<h1>{{ page.title }}</h1>
-
-{%-include post_list.html category=page.which_category-%}
+{% if page.type == "category" %}
+  <h1>Category: {{ page.title }}</h1>
+  {%- include post_list.html category=page.title -%}
+{% elsif page.type == "tag" %}
+  <h1>Tag: {{ page.title }}</h1>
+  {%- include post_list.html tag=page.title -%}
+{% endif %}

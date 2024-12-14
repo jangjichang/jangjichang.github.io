@@ -1,5 +1,6 @@
 ---
 layout: post
+category: example2
 slug: hr example
 ---
 

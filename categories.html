@@ -1,0 +1,31 @@
+---
+layout: default
+title: "All Categories"
+---
+
+{%-include back_link.html-%}
+
+<h1>{{ page.title }}</h1>
+
+{% assign categories_array = "" | split: "" %}
+
+{% for category in site.categories %}
+  {% assign category_size = category[1] | size | prepend: '0000' | slice: -4, 4 %}
+  {% assign category_info = category_size | append: '#' | append: category[0] %}
+  {% assign categories_array = categories_array | push: category_info %}
+{% endfor %}
+
+{% assign sorted_categories = categories_array | sort | reverse %}
+
+<ul class="categories-list">
+  {% for category_info in sorted_categories %}
+    {% assign category_parts = category_info | split: '#' %}
+    {% assign category_name = category_parts[1] %}
+    {% assign category_size = category_parts[0] | plus: 0 %}
+    <li class="category-item">
+      <a href="/categories/{{ category_name }}/" class="category-link">
+        {{ category_name }} <span class="post-count">({{ category_size }})</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
