@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<h1>Tag: {{ page.tag_name }}</h1>
+
+<div class="post-list">
+  {% assign tag = page.tag_name %}
+  {% assign posts = site.tags[tag] %}
+
+  {% if posts %}
+    <ul>
+      {% for post in posts %}
+        <li>
+          <div class="post-item">
+            <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title | downcase }}</a>
+            <span>{{ post.date | date: site.theme_config.date_format }}</span>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts with this tag.</p>
+  {% endif %}
+</div>

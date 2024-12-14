@@ -1,0 +1,32 @@
+---
+layout: default
+title: "All Categories"
+permalink: /categories/
+---
+
+<h1>{{ page.title }}</h1>
+
+{% assign temp_categories = "" | split: "" %}
+{% for category in site.categories %}
+    {% capture category_size %}{{ category[1].size }}{% endcapture %}
+    {% capture category_name %}{{ category[0] }}{% endcapture %}
+
+    {% capture temp_category %}{{ category_size }}|{{ category_name }}{% endcapture %}
+    {% assign temp_categories = temp_categories | push: temp_category %}
+{% endfor %}
+
+{% assign sorted_categories = temp_categories | sort | reverse %}
+
+{% if sorted_categories %}
+<ul>
+{% for temp_category in sorted_categories %}
+    {% assign category_parts = temp_category | split: '|' %}
+    {% assign category_name = category_parts[1] %}
+    {% assign category_size = category_parts[0] %}
+    <li>
+        <a href="{{ site.baseurl }}/categories/{{ category_name | slugify }}">{{ category_name }}</a>
+        <span>({{ category_size }} posts)</span>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}

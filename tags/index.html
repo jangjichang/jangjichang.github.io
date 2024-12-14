@@ -1,0 +1,31 @@
+---
+layout: default
+title: "All Tags"
+permalink: /tags/
+---
+
+<h1>{{ page.title }}</h1>
+
+{% assign temp_tags = "" | split: "" %}
+{% for tag in site.tags %}
+  {% capture tag_size %}{{ tag[1].size }}{% endcapture %}
+  {% capture tag_name %}{{ tag[0] }}{% endcapture %}
+  {% capture temp_tag %}{{ tag_size }}|{{ tag_name }}{% endcapture %}
+  {% assign temp_tags = temp_tags | push: temp_tag %}
+{% endfor %}
+
+{% assign sorted_tags = temp_tags | sort | reverse %}
+
+{% if sorted_tags %}
+<ul>
+{% for temp_tag in sorted_tags %}
+  {% assign tag_parts = temp_tag | split: '|' %}
+  {% assign tag_name = tag_parts[1] %}
+  {% assign tag_size = tag_parts[0] %}
+    <li>
+      <a href="{{ site.baseurl }}/tags/{{ tag_name | slugify }}">{{ tag_name }}</a>
+      <span>({{ tag_size }} posts)</span>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}

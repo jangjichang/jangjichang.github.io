@@ -20,6 +20,12 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
+      - name: Generate Tag Pages
+        run: ruby scripts/generate_tag_pages.rb
+
+      - name: Generate Category Pages
+        run: ruby scripts/generate_category_pages.rb
+
       - name: Build Site
         run: bundle exec jekyll build
 

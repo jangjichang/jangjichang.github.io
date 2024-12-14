@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{%-include back_link.html-%}
-
 {% if page.type == "category" %}
   <h1>Category: {{ page.title }}</h1>
   {%- include post_list.html category=page.title -%}

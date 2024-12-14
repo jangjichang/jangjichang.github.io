@@ -4,7 +4,8 @@ email: wlckd90@gmail.com # email of site's author
 url: https://jangjichang.github.io # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
-  A (nearly) no-CSS, fast, minimalist Jekyll theme.
+  JiChang Jang's Tech Blog
+  장지창의 테크 블로그
 
 lang: ko-KR
 timezone: Asia/Seoul
@@ -25,18 +26,17 @@ theme_config:
 sass:
   style: :compressed
 
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: 'archive'
-    tag: 'archive'
-  permalinks:
-    category: '/categories/:name/'
-    tag: '/tags/:name/'
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
+
+collections:
+  tag_pages:
+    output: true
+    permalink: /tags/:name/
+  category_pages:
+    output: true
+    permalink: /categories/:name/
+  post_pages:
+    output: true
+    permalink: /posts/:name/
