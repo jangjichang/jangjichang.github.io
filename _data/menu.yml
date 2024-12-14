@@ -4,10 +4,7 @@
 entries:
   - title: info<br>
     entries:
-      - title: |
-          <p>소프트웨어 엔지니어 장지창입니다.</p>
-          <p>견고한 시스템 설계와 문제 해결을 즐기는 개발자입니다.</p>
-          <p>제가 경험한 개발에 대한 모든 것을 공유합니다.</p>
+      - title: 소프트웨어 엔지니어 장지창입니다.
 
   - title: posts
     url: posts
