@@ -3,13 +3,25 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - master  # 또는 main
+  workflow_dispatch:  # 수동 실행 가능
+
+# GitHub Pages 배포에 필요한 권한 설정
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -25,18 +37,24 @@ jobs:
 
       - name: Generate Tag Pages
         run: ruby scripts/generate_tag_pages.rb
+        continue-on-error: true  # 스크립트가 없는 경우 계속 진행
 
       - name: Generate Category Pages
         run: ruby scripts/generate_category_pages.rb
+        continue-on-error: true  # 스크립트가 없는 경우 계속 진행
 
       - name: Build Site
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
