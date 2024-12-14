@@ -9,6 +9,8 @@ gem 'csv'
 gem 'ostruct'
 gem 'base64'
 gem 'bigdecimal'
-gem 'jekyll-archives'
+group :jekyll_plugins do
+  gem "jekyll-archives"
+end
 
 gemspec
