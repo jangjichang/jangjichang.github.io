@@ -131,6 +131,6 @@ False
 `is` 연산자는 객체의 동일성을 비교하므로, 값 비교보다 빠르게 결과를 반환한다.
 
 
-## 참고 자료
+# 참고
 
 - [파이썬 문자열 interning](https://arpitbhayani.me/blogs/string-interning-python/)
