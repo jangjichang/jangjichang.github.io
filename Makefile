@@ -9,7 +9,7 @@ up:
 
 new:
 	@if [ -z "$(title)" ]; then \
-	  echo "Error: Please provide a title. (ex: make new-post title=\"My New Post\")"; \
+	  echo "Error: Please provide a title. (ex: make new title=\"My New Post\")"; \
 	  exit 1; \
 	fi; \
 	TITLE_SLUG=`echo "$(title)" | sed 's/ /-/g' | tr '[:upper:]' '[:lower:]'`; \

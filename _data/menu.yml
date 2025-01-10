@@ -2,20 +2,20 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info<br>
-    entries:
-      - title: 소프트웨어 엔지니어 장지창입니다.
+  - title: 최근 5개 글
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: '[show more...]'
+      show_more_url: posts
 
-  - title: posts
-    url: posts
-
-  - title: categories
+  - title: 카테고리
     url: categories
 
-  - title: tags
+  - title: 태그
     url: tags
 
-  - title: links
+  - title: 링크
     entries:
       - title: github
         url: https://github.com/jangjichang

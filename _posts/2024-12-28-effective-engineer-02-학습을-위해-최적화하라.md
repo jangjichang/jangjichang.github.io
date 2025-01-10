@@ -1,7 +1,7 @@
 ---
 layout: post
-category: effective-engineer
-tags: ["effective-engineer", "book"] 
+category: book
+tags: ["effective-engineer"] 
 ---
 
 # 2. 학습을 위해 최적화하라

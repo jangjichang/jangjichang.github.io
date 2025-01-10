@@ -1,7 +1,7 @@
 ---
 layout: post
-category: effective-engineer
-tags: ["effective-engineer", "book"] 
+category: book
+tags: ["effective-engineer"] 
 ---
 
 # [우선순위를 정기적으로 점검하라](#우선순위를-정기적으로-점검하라)

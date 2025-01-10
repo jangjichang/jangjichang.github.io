@@ -1,7 +1,7 @@
 ---
 layout: post
-category: effective-engineer
-tags: ["effective-engineer", "book"]
+category: book
+tags: ["effective-engineer"]
 ---
 # 1. 레버리지가 높은 활동에 집중하라.
 
