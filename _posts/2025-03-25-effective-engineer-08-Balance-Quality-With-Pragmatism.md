@@ -1,7 +1,7 @@
 ---
 layout: post
 category: book
-tags: ["effective-engineer"] 
+tags: ["effective-engineer"]
 ---
 
 # [품질과 실용주의 사이에서 균형을 유지하라](품질과-실용주의-사이에서-균형을-유지하라)
