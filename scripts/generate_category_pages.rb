@@ -17,6 +17,13 @@ EOF
 # categories 디렉토리가 없다면 생성
 FileUtils.mkdir_p(CATEGORIES_DIR)
 
+# index.html을 제외한 모든 파일과 폴더 삭제
+Dir.glob("#{CATEGORIES_DIR}/**/*").each do |file|
+  next if file == "#{CATEGORIES_DIR}/index.html" # index.html 파일은 건너뜀
+  FileUtils.rm_rf(file)
+end
+
+
 # 모든 카테고리를 저장할 집합
 all_categories = Set.new
 
