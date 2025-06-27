@@ -1,7 +1,7 @@
 ---
 layout: post
 category: data-structures
-tags: ["data-intensive-applications", 'data-structures', 'sstable', 'btree', 'log-structured-merge-tree', 'lsm-tree'] 
+tags: ["designing-data-intensive-applications", 'data-structures', 'sstable', 'btree', 'log-structured-merge-tree', 'lsm-tree'] 
 ---
 
 # LSM Tree와 B-Tree

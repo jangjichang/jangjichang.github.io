@@ -1,7 +1,7 @@
 ---
 layout: post
 category: book
-tags: ["data-intensive-applications", 'data-engineering']
+tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
 
 <!-- TOC -->
