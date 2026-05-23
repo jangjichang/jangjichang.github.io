@@ -23,7 +23,7 @@ body {
   color: var(--text);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
                "Apple SD Gothic Neo", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.7;
   margin: 0;
   min-height: 100%;
@@ -131,12 +131,31 @@ img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border
 
 // -------------------- home: hero -------------------- //
 .hero { margin-bottom: 3.5rem; }
-.hero h1 { font-size: 2.1rem; margin-bottom: 1rem; }
-.hero .identity { font-size: 1.05rem; color: var(--text); max-width: 60ch; margin: 0 0 0.6rem; }
-.hero .activities { list-style: disc; padding-left: 1.4rem; margin: 0 0 1.2rem; color: var(--text); max-width: 60ch; }
-.hero .activities li { margin: 0.2rem 0; }
-.hero .current { font-size: 1rem; color: var(--text); max-width: 60ch; margin: 0 0 0.8rem; }
-.hero .about-link { margin: 0; font-size: 0.95rem; font-weight: 600; }
+.hero h1 { font-size: 2.1rem; margin: 0 0 1.4rem; line-height: 1.35; }
+.hero p { margin: 0 0 1rem; color: var(--text); }
+.hero ul { padding-left: 1.4rem; margin: 0.4rem 0 1.4rem; }
+.hero ul li { margin: 0.45rem 0; color: var(--text); line-height: 1.65; }
+
+// rotating identity label — grid-stack active row over hidden ghosts
+// so the cell always sizes to the longest (modifier + suffix), no layout shift.
+// Only #phrase-active (the modifier) is accented and fades; the suffix stays.
+#hi-rotator {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+#hi-rotator > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+#phrase-row { color: var(--text); }
+#phrase-active {
+  color: var(--accent);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+#phrase-active.fade-out { opacity: 0; }
+.phrase-ghost { visibility: hidden; }
 
 // -------------------- home: section heads -------------------- //
 .section { margin: 3rem 0; }
@@ -266,12 +285,12 @@ img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border
 }
 
 // -------------------- about: intro -------------------- //
-.about-intro { font-size: 1rem; line-height: 1.5; margin: 0; }
+.about-intro { margin: 0; }
 .about-intro p { margin: 0 0 0.9rem; }
 .about-intro p:last-child { margin-bottom: 0; }
 
 // -------------------- about: career timeline (year on left, plain) -------------------- //
-.timeline { margin: 0 0 1.8rem; font-size: 1rem; line-height: 1.5; }
+.timeline { margin: 0 0 1.8rem; }
 .tl-row {
   display: flex;
   align-items: baseline;
