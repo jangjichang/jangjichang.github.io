@@ -131,9 +131,12 @@ img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border
 
 // -------------------- home: hero -------------------- //
 .hero { margin-bottom: 3.5rem; }
-.hero h1 { font-size: 2.1rem; margin-bottom: 0.3rem; }
-.hero .role { color: var(--accent); font-weight: 600; margin: 0 0 1rem; }
-.hero .intro { font-size: 1.05rem; color: var(--text); max-width: 60ch; }
+.hero h1 { font-size: 2.1rem; margin-bottom: 1rem; }
+.hero .identity { font-size: 1.05rem; color: var(--text); max-width: 60ch; margin: 0 0 0.6rem; }
+.hero .activities { list-style: disc; padding-left: 1.4rem; margin: 0 0 1.2rem; color: var(--text); max-width: 60ch; }
+.hero .activities li { margin: 0.2rem 0; }
+.hero .current { font-size: 1rem; color: var(--text); max-width: 60ch; margin: 0 0 0.8rem; }
+.hero .about-link { margin: 0; font-size: 0.95rem; font-weight: 600; }
 
 // -------------------- home: section heads -------------------- //
 .section { margin: 3rem 0; }
