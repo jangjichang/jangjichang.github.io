@@ -1,11 +1,9 @@
 ---
 layout: post
+title: "LSM Tree와 B-Tree"
 category: data-structures
 tags: ["designing-data-intensive-applications", 'data-structures', 'sstable', 'btree', 'log-structured-merge-tree', 'lsm-tree'] 
 ---
-
-# LSM Tree와 B-Tree
-
 해시 색인의 문제로 `너무 많은 메모리 공간 필요`, `비효율적인 범위 질의(range query)` 등이 발생한다.
 
 이 문제를 해결하기 위해 `SSTable`과 `LSM Tree`가 등장한다.

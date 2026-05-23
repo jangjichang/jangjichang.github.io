@@ -1,0 +1,11 @@
+# Start Here 시리즈 카드 정의
+# tag: 해당 시리즈를 묶는 태그 (site.tags 키와 일치)
+# 글은 시리즈 페이지에서 날짜 오름차순(연재 순서)으로 정렬됩니다.
+featured:
+  - title: Effective Engineer
+    tag: effective-engineer
+    description: "한정된 시간으로 더 큰 임팩트를 내는 법. 『The Effective Engineer』를 8개 장으로 정리한 연재입니다."
+
+  - title: 데이터 중심 애플리케이션
+    tag: designing-data-intensive-applications
+    description: "신뢰성·확장성·유지보수성을 갖춘 시스템은 어떻게 만들까. 『Designing Data-Intensive Applications』를 읽으며 정리한 기록입니다."

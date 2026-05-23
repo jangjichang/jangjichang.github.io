@@ -1,9 +1,9 @@
 ---
 layout: post
+title: "Partitioning"
 category: book
 tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
-
 <!-- TOC -->
 * [Partitioning](#partitioning)
   * [파티셔닝과 복제](#파티셔닝과-복제)
@@ -22,7 +22,6 @@ tags: ["designing-data-intensive-applications", 'data-engineering']
   * [정리](#정리)
 <!-- TOC -->
 
-# [Partitioning](#partitioning)
 
 데이터셋이 매우 크거나 질의 처리량이 매우 높다면 복제만으로는 부족하고 데이터를 **파티션**으로
 쪼갤 필요가 있다. 이 작업을 **샤딩**이라고 한다.

@@ -1,9 +1,9 @@
 ---
 layout: post
+title: "비트캐스크와 해시 색인의 동작 원리, 그리고 컴팩션 구조까지"
 category: data-structures
 tags: ["designing-data-intensive-applications", 'data-structures', 'sstable', 'btree', 'log-structured-merge-tree', 'lsm-tree'] 
 ---
-
 <!-- TOC -->
 * [비트캐스크와 해시 색인의 동작 원리, 그리고 컴팩션 구조까지](#비트캐스크와-해시-색인의-동작-원리-그리고-컴팩션-구조까지)
   * [가장 간단한 데이터베이스로 시작](#가장-간단한-데이터베이스로-시작)
@@ -16,7 +16,6 @@ tags: ["designing-data-intensive-applications", 'data-structures', 'sstable', 'b
   * [참고](#참고)
 <!-- TOC -->
 
-# 비트캐스크와 해시 색인의 동작 원리, 그리고 컴팩션 구조까지
 
 데이터애플리케이션 3장에서 `저장소와 검색`에 대해 다룬다.
 파일 기반 저장소를 시작으로 SQL, NoSQL 데이터베이스에서 사용하는 데이터 저장 구조와 검색 방식에 대해 설명한다.

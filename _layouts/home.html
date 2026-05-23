@@ -1,13 +1,56 @@
 ---
 layout: default
 ---
-<header>
+
+<section class="hero">
   <h1>{{ site.title }}</h1>
-  {%-if site.theme_config.show_description-%}
-    <p>{{ site.description }}</p>
-  {%-endif-%}
-</header>
+  {%- if page.role -%}<p class="role">{{ page.role }}</p>{%- endif -%}
+  {%- if page.intro_ko -%}<p class="intro">{{ page.intro_ko }}</p>{%- endif -%}
+</section>
 
-{%-include menu_item.html collection=site.data.menu.entries-%}
+{%- comment -%} ----- Start Here: 대표 시리즈 ----- {%- endcomment -%}
+{%- if site.data.series.featured -%}
+<section class="section">
+  <h2>Start Here</h2>
+  <div class="series-grid">
+    {%- for s in site.data.series.featured -%}
+      {%- assign cnt = site.tags[s.tag] | size -%}
+      <a class="series-card" href="{{ '/tags/' | append: s.tag | append: '/' | relative_url }}">
+        <p class="title">{{ s.title }}</p>
+        <p class="desc">{{ s.description }}</p>
+        <span class="count">{{ cnt }}개 글 →</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
 
-{{ content }}
+{%- comment -%} ----- 최근 글 ----- {%- endcomment -%}
+<section class="section">
+  <h2>최근 글</h2>
+  <div class="post-list">
+    <ul>
+      {%- for post in site.posts limit: 6 -%}
+        <li class="post-item">
+          <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.theme_config.date_format }}</time>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <a class="more-link" href="{{ '/posts' | relative_url }}">모든 글 보기 →</a>
+</section>
+
+{%- comment -%} ----- 주제별 둘러보기 ----- {%- endcomment -%}
+{%- if site.categories.size > 0 -%}
+<section class="section">
+  <h2>주제별 둘러보기</h2>
+  <div class="chips">
+    {%- for cat in site.categories -%}
+      {%- assign name = cat[0] | strip -%}
+      {%- assign slug = name | slugify -%}
+      <a class="chip" href="{{ '/categories/' | append: slug | append: '/' | relative_url }}">{{ name }}<span class="n">{{ cat[1] | size }}</span></a>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
