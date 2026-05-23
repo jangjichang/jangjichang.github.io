@@ -1,8 +1,8 @@
-<!--<div style="display: inline-block; margin-bottom: 1rem;">-->
-<div>
-  <a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a> |
-  <a href="{{ '/posts' | relative_url }}">Posts</a> |
-  <a href="{{ '/categories' | relative_url }}">Categories</a> |
-  <a href="{{ '/tags' | relative_url }}">Tags</a> |
-  <a href="{{ '/about' | relative_url }}">About</a>
-</div>
+<header class="site-nav">
+  <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
+  <nav>
+    <a href="{{ '/posts' | relative_url }}">글</a>
+    <a href="{{ '/categories' | relative_url }}">주제</a>
+    <a href="{{ '/about' | relative_url }}">소개</a>
+  </nav>
+</header>

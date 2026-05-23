@@ -2,24 +2,33 @@
 layout: default
 ---
 
-<h1>Tag: {{ page.tag_name }}</h1>
+{%- comment -%} 대표 시리즈면 시리즈 제목/설명을 보여주고, 아니면 일반 태그 헤더 {%- endcomment -%}
+{%- assign matched = "" -%}
+{%- for s in site.data.series.featured -%}
+  {%- if s.tag == page.tag_name -%}{%- assign matched = s -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if matched != "" -%}
+  <h1>{{ matched.title }}</h1>
+  <p class="intro">{{ matched.description }}</p>
+{%- else -%}
+  <h1>태그: {{ page.tag_name }}</h1>
+{%- endif -%}
 
 <div class="post-list">
-  {% assign tag = page.tag_name %}
-  {% assign posts = site.tags[tag] %}
-
-  {% if posts %}
+  {%- assign posts = site.tags[page.tag_name] | sort: "date" -%}
+  {%- if posts -%}
     <ul>
-      {% for post in posts %}
-        <li>
-          <div class="post-item">
-            <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title | downcase }}</a>
-            <span>{{ post.date | date: site.theme_config.date_format }}</span>
-          </div>
+      {%- for post in posts -%}
+        <li class="post-item">
+          <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.theme_config.date_format }}</time>
         </li>
-      {% endfor %}
+      {%- endfor -%}
     </ul>
-  {% else %}
-    <p>No posts with this tag.</p>
-  {% endif %}
+  {%- else -%}
+    <p>이 태그의 글이 없습니다.</p>
+  {%- endif -%}
 </div>
+
+<a class="back-home" href="{{ '/' | relative_url }}">← 홈으로</a>

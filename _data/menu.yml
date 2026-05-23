@@ -9,15 +9,7 @@ entries:
       show_more_text: '[show more...]'
       show_more_url: posts
 
-  - title: 카테고리
-    url: categories
-
-  - title: 태그
-    url: tags
-
   - title: 링크
     entries:
-      - title: github
-        url: https://github.com/jangjichang
       - title: linkedin
         url: https://www.linkedin.com/in/jichang-jang-3008aa162/

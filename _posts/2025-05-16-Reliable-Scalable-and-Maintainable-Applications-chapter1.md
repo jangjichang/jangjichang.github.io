@@ -1,9 +1,9 @@
 ---
 layout: post
+title: "1장 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션"
 category: book
 tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
-
 <!-- TOC -->
 * [1장 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션](#1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션)
   * [신뢰성](#신뢰성)
@@ -21,7 +21,6 @@ tags: ["designing-data-intensive-applications", 'data-engineering']
     * [발전성: 변화를 쉽게 만들기](#발전성--변화를-쉽게-만들기)
 <!-- TOC -->
 
-# 1장 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션
 
 오늘날 많은 애플리케이션은 계산 중심(compute-intensive)과는 다르게 데이터 중심(data-intensive)적이다. 
 이제부터 개발자는 애플리케이션 개발자뿐만 아니라 데이터 시스템 설계자이기도 하다.

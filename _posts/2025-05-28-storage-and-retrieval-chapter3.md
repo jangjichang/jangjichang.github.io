@@ -1,9 +1,9 @@
 ---
 layout: post
+title: "3장 저장소와 검색"
 category: book
 tags: ["designing-data-intensive-applications", 'data-engineering'] 
 ---
-
 <!-- TOC -->
 * [3장 저장소와 검색](#3장-저장소와-검색)
   * [데이터베이스를 강력하게 만드는 데이터 구조](#데이터베이스를-강력하게-만드는-데이터-구조)
@@ -39,7 +39,6 @@ tags: ["designing-data-intensive-applications", 'data-engineering']
   * [칼럼 지향 저장소](#칼럼-지향-저장소)
 <!-- TOC -->
 
-# 3장 저장소와 검색
 
 데이터베이스의 가장 기본적인 기능은 데이터를 저장하고 나중에 그 데이터를 요청하면 다시 데이터를 제공하는 것이다.
 데이터베이스가 데이터를 저장하는 방법과 데이터를 요청했을 때 다시 찾을 수 있는 방법을 알아보자.
