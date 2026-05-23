@@ -1,9 +1,9 @@
 ---
 layout: post
+title: "2장 데이터 모델과 질의 언어"
 category: book
 tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
-
 <!-- TOC -->
 * [2장 데이터 모델과 질의 언어](#2장-데이터-모델과-질의-언어)
   * [관계형 모델과 문서 모델](#관계형-모델과-문서-모델)
@@ -34,7 +34,6 @@ tags: ["designing-data-intensive-applications", 'data-engineering']
   * [정리](#정리)
 <!-- TOC -->
 
-# 2장 데이터 모델과 질의 언어
 
 데이터 모델은 중요하다. 왜냐하면 소프트웨어가 어떻게 작성됐는지 뿐만 아니라 해결하려는 **문제를 어떻게 생각해야 하는지**에
 대해서도 지대한 영향을 미치기 때문이다.

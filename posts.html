@@ -3,18 +3,19 @@ layout: default
 title: "All Posts"
 ---
 
-<h1>{{ page.title }}</h1>
-
+<h1>글</h1>
 
 {% if site.posts %}
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <div class="post-item">
-        <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title | downcase }}</a>
-        <span>{{ post.date | date: site.theme_config.date_format }}</span>
-      </div>
-    </li>
-  {% endfor %}
-</ul>
+<div class="post-list">
+  <ul>
+    {% for post in site.posts %}
+      <li class="post-item">
+        <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.theme_config.date_format }}</time>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endif %}
+
+<a class="back-home" href="{{ '/' | relative_url }}">← 홈으로</a>

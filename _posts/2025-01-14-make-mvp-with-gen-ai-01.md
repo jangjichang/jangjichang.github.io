@@ -1,11 +1,9 @@
 ---
 layout: post
+title: "생성형 AI로 MVP 만들기 1편"
 category: make-mvp-with-gen-ai
 tags: ["gen-ai", "mvp"]
 ---
-
-# 생성형 AI로 MVP 만들기 1편
-
 ## [Intro](#intro)
 나는 생성형 AI를 사용하면서 두 가지 장점을 느꼈다. 
 

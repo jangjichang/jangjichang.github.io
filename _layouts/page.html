@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+{% unless page.hide_title %}<h1>{{ page.title }}</h1>{% endunless %}
 
 {{ content }}
