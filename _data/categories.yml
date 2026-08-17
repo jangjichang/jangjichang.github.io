@@ -1,0 +1,18 @@
+sections:
+  - slug: engineering
+    index: "01"
+    title: ENGINEERING
+    label: 엔지니어링
+    description: 분산 시스템, 데이터 구조, 생성형 AI를 구현하며 발견한 원리와 패턴.
+
+  - slug: reading-notes
+    index: "02"
+    title: READING NOTES
+    label: 리딩 노트
+    description: 더 나은 엔지니어링 판단을 위해 읽고, 요약하고, 적용한 기록.
+
+  - slug: essay
+    index: "03"
+    title: ESSAY
+    label: 에세이
+    description: 기술 바깥에서 발견한 태도와 생각, 그리고 오래 남은 장면.

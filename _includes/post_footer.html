@@ -1,10 +1,11 @@
 {% if page.tags and page.tags.size > 0 %}
 <footer class="post-tags">
-  <p>Tags:
+  <p class="eyebrow">RELATED INDEX</p>
+  <div>
     {% for tag in page.tags %}
-      <a href="/tags/{{ tag | slugify }}" class="tag">{{ tag }}</a>
-      {%- unless forloop.last -%}, {% endunless %}
+      {%- assign tag_slug = tag | slugify -%}
+      <a href="{{ '/tags/' | append: tag_slug | append: '/' | relative_url }}" class="tag">#{{ tag }}</a>
     {% endfor %}
-  </p>
+  </div>
 </footer>
 {% endif %}

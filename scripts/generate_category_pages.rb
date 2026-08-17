@@ -2,6 +2,7 @@
 
 require 'yaml'
 require 'fileutils'
+require 'set'
 
 # 설정
 POSTS_DIR = '_posts'
@@ -9,7 +10,7 @@ CATEGORIES_DIR = 'categories'
 TEMPLATE = <<-EOF
 ---
 layout: category
-title: "%{category} Category"
+title: "%{category}"
 category_name: "%{category}"
 ---
 EOF

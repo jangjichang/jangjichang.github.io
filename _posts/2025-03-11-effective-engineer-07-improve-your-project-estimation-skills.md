@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프로젝트 추정 기술을 향상시켜라"
-category: book
+category: reading-notes
 tags: ["effective-engineer"]  
 ---
 ## [실천 사항](#실천-사항)

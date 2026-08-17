@@ -1,21 +1,25 @@
 ---
 layout: default
-title: "All Posts"
+title: "Archive"
+permalink: /posts/
 ---
 
-<h1>글</h1>
+<header class="archive-header archive-header--index">
+  <div>
+    <p class="eyebrow">COMPLETE INDEX</p>
+    <h1>ARCHIVE</h1>
+  </div>
+  <p class="archive-description">구현하고, 읽고, 생각한 것들.<br><span>{{ site.posts.size | prepend: '0' | slice: -2, 2 }} ARTICLES / 2024—{{ 'now' | date: '%Y' }}</span></p>
+</header>
 
 {% if site.posts %}
-<div class="post-list">
-  <ul>
+<div class="archive-list">
+  <ol class="post-index">
     {% for post in site.posts %}
-      <li class="post-item">
-        <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.theme_config.date_format }}</time>
-      </li>
+      {% include post_row.html post=post index=forloop.index %}
     {% endfor %}
-  </ul>
+  </ol>
 </div>
 {% endif %}
 
-<a class="back-home" href="{{ '/' | relative_url }}">← 홈으로</a>
+<a class="back-home" href="{{ '/' | relative_url }}">← HOME</a>

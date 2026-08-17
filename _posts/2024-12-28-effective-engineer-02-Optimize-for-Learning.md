@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2. 학습을 위해 최적화하라"
-category: book
+category: reading-notes
 tags: ["effective-engineer"] 
 ---
 서평: 회사에서 지루하고 편한 업무를 하는게 무엇보다도 위험하다는 것을 다시 한번 깨달았다. 도전적인 업무를 통해 성장하고 학습하는 것이 중요하다.

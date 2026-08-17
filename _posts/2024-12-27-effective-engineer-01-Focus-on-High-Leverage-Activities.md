@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "1. 레버리지가 높은 활동에 집중하라."
-category: book
+category: reading-notes
 tags: ["effective-engineer"]
 ---
 서평: 시간이 촉박하면 쉬운 일을 우선으로 처리하는 경향이 생긴다.

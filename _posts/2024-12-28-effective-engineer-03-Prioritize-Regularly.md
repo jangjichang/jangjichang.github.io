@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "우선순위를 정기적으로 점검하라"
-category: book
+category: reading-notes
 tags: ["effective-engineer"] 
 ---
 서평: 학습의 복리 효과 중 하나로 새로운 지식을 학습하는데 도움이 된다는 것이 있었다.

@@ -2,22 +2,26 @@
 layout: default
 ---
 
-<h1>{{ page.category_name }}</h1>
+{%- assign category_meta = site.data.categories.sections | where: "slug", page.category_name | first -%}
+{%- assign posts = site.categories[page.category_name] | sort: "date" | reverse -%}
+<header class="archive-header">
+  <div>
+    <p class="eyebrow">SECTION {{ category_meta.index }}</p>
+    <h1>{{ category_meta.title | default: page.category_name | replace: '-', ' ' | upcase }}</h1>
+  </div>
+  <p class="archive-description">{{ category_meta.description }}<br><span>{{ posts.size | prepend: '0' | slice: -2, 2 }} ARTICLES</span></p>
+</header>
 
-<div class="post-list">
-  {%- assign posts = site.categories[page.category_name] | sort: "date" | reverse -%}
+<div class="archive-list">
   {%- if posts -%}
-    <ul>
+    <ol class="post-index">
       {%- for post in posts -%}
-        <li class="post-item">
-          <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.theme_config.date_format }}</time>
-        </li>
+        {%- include post_row.html post=post index=forloop.index -%}
       {%- endfor -%}
-    </ul>
+    </ol>
   {%- else -%}
     <p>이 주제의 글이 없습니다.</p>
   {%- endif -%}
 </div>
 
-<a class="back-home" href="{{ '/' | relative_url }}">← 홈으로</a>
+<a class="back-home" href="{{ '/categories/' | relative_url }}">← ALL SECTIONS</a>

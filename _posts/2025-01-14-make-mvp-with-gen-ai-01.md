@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "생성형 AI로 MVP 만들기 1편"
-category: make-mvp-with-gen-ai
+category: engineering
 tags: ["gen-ai", "mvp"]
 ---
 ## [Intro](#intro)

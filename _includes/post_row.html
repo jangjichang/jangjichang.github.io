@@ -1,0 +1,10 @@
+{%- assign category_meta = site.data.categories.sections | where: "slug", include.post.category | first -%}
+{%- assign row_number = include.index | prepend: '0' | slice: -2, 2 -%}
+<li class="post-row">
+  <span class="post-number" aria-hidden="true">{{ row_number }}</span>
+  <div class="post-row-main">
+    <span class="post-section">{{ category_meta.title | default: include.post.category | replace: '-', ' ' | upcase }}</span>
+    <a href="{{ include.post.url | relative_url }}" class="post-title">{{ include.post.title }}</a>
+  </div>
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y.%m.%d" }}</time>
+</li>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "3장 저장소와 검색"
-category: book
+category: engineering
 tags: ["designing-data-intensive-applications", 'data-engineering'] 
 ---
 <!-- TOC -->

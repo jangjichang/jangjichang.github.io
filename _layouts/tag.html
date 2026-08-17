@@ -9,26 +9,27 @@ layout: default
 {%- endfor -%}
 
 {%- if matched != "" -%}
-  <h1>{{ matched.title }}</h1>
-  <p class="intro">{{ matched.description }}</p>
+  <header class="archive-header">
+    <div><p class="eyebrow">SERIES / TAG</p><h1>{{ matched.title }}</h1></div>
+    <p class="archive-description">{{ matched.description }}</p>
+  </header>
 {%- else -%}
-  <h1>태그: {{ page.tag_name }}</h1>
+  <header class="archive-header">
+    <div><p class="eyebrow">TAG INDEX</p><h1>#{{ page.tag_name }}</h1></div>
+  </header>
 {%- endif -%}
 
-<div class="post-list">
+<div class="archive-list">
   {%- assign posts = site.tags[page.tag_name] | sort: "date" -%}
   {%- if posts -%}
-    <ul>
+    <ol class="post-index">
       {%- for post in posts -%}
-        <li class="post-item">
-          <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.theme_config.date_format }}</time>
-        </li>
+        {%- include post_row.html post=post index=forloop.index -%}
       {%- endfor -%}
-    </ul>
+    </ol>
   {%- else -%}
     <p>이 태그의 글이 없습니다.</p>
   {%- endif -%}
 </div>
 
-<a class="back-home" href="{{ '/' | relative_url }}">← 홈으로</a>
+<a class="back-home" href="{{ '/tags/' | relative_url }}">← ALL TAGS</a>

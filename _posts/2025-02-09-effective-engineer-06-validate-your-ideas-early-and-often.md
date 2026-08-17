@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이디어는 일찍 그리고 자주 검증하라"
-category: book
+category: reading-notes
 tags: ["effective-engineer"] 
 ---
 서평: 큰 문제는 작은 문제로 쪼개고 단계별로 해결한다. 컴퓨터공학의 분할 정복 알고리즘이다.

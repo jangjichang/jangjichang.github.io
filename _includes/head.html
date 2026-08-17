@@ -15,9 +15,11 @@
   {%-seo title=false-%}
   {%-feed_meta-%}
 
-  <meta name="description" content="개발자 장지창의 기술 블로그입니다. 백엔드 개발, 사이드 프로젝트 등 다양한 이야기를 담고 있어요.">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://jangjichang.github.io/">
+  <meta name="theme-color" content="#090909">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX2JHNM2YV"></script>

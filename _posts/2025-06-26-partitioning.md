@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Partitioning"
-category: book
+category: engineering
 tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
 <!-- TOC -->

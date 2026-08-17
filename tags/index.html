@@ -1,10 +1,13 @@
 ---
 layout: default
-title: "All Tags"
+title: "Tags"
 permalink: /tags/
 ---
 
-<h1>{{ page.title }}</h1>
+<header class="archive-header archive-header--index">
+  <div><p class="eyebrow">DETAILED INDEX</p><h1>ALL TAGS</h1></div>
+  <p class="archive-description">시리즈와 세부 기술을 가로지르는 키워드.</p>
+</header>
 
 {% assign temp_tags = "" | split: "" %}
 {% for tag in site.tags %}
@@ -17,15 +20,18 @@ permalink: /tags/
 {% assign sorted_tags = temp_tags | sort | reverse %}
 
 {% if sorted_tags %}
-<ul>
+<ul class="tag-directory">
 {% for temp_tag in sorted_tags %}
   {% assign tag_parts = temp_tag | split: '|' %}
   {% assign tag_name = tag_parts[1] %}
   {% assign tag_size = tag_parts[0] %}
     <li>
-      <a href="{{ site.baseurl }}/tags/{{ tag_name | slugify }}">{{ tag_name }}</a>
-      <span>({{ tag_size }} posts)</span>
+      {%- assign tag_slug = tag_name | slugify -%}
+      <a href="{{ '/tags/' | append: tag_slug | append: '/' | relative_url }}">#{{ tag_name }}</a>
+      <span>{{ tag_size | prepend: '0' | slice: -2, 2 }}</span>
     </li>
 {% endfor %}
 </ul>
 {% endif %}
+
+<a class="back-home" href="{{ '/categories/' | relative_url }}">← ALL SECTIONS</a>

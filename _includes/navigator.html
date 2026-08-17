@@ -1,8 +1,10 @@
-<header class="site-nav">
-  <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
-  <nav>
-    <a href="{{ '/posts' | relative_url }}">글</a>
-    <a href="{{ '/categories' | relative_url }}">주제</a>
-    <a href="{{ '/about' | relative_url }}">소개</a>
+<header class="site-header">
+  <a href="{{ '/' | relative_url }}" class="wordmark" aria-label="{{ site.title }} 홈">
+    <span>JI.CHANG</span>
+  </a>
+  <nav aria-label="주요 메뉴">
+    <a href="{{ '/posts/' | relative_url }}"{% if page.url == '/posts/' %} aria-current="page"{% endif %}>Archive</a>
+    <a href="{{ '/categories/' | relative_url }}"{% if page.url contains '/categories/' %} aria-current="page"{% endif %}>Sections</a>
+    <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
   </nav>
 </header>

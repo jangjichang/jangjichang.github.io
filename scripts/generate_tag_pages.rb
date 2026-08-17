@@ -2,6 +2,7 @@
 
 require 'yaml'
 require 'fileutils'
+require 'set'
 
 # 설정
 POSTS_DIR = '_posts'

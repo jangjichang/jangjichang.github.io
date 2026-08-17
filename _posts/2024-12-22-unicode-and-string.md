@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "1. 유니코드란 무엇인가?"
-category: computer-science
+category: engineering
 tags: ["Unicode", "python"]
 ---
 ## 유니코드의 배경

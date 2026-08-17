@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "1장 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션"
-category: book
+category: engineering
 tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
 <!-- TOC -->

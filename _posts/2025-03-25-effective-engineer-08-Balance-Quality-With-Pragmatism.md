@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "품질과 실용주의 사이에서 균형을 유지하라"
-category: book
+category: reading-notes
 tags: ["effective-engineer"]
 ---
 ## [실천 사항](#실천-사항)

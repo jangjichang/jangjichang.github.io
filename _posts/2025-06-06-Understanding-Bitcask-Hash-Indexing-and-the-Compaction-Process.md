@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "비트캐스크와 해시 색인의 동작 원리, 그리고 컴팩션 구조까지"
-category: data-structures
+category: engineering
 tags: ["designing-data-intensive-applications", 'data-structures', 'sstable', 'btree', 'log-structured-merge-tree', 'lsm-tree'] 
 ---
 <!-- TOC -->
@@ -182,4 +182,3 @@ data file segment 2
 
 [^1]: [bitcask 소개 3페이지 참고](https://riak.com/assets/bitcask-intro.pdf)
 [^2]: [riak bitcask backend weaknesses](https://docs.riak.com/riak/kv/2.2.3/setup/planning/backend/bitcask/index.html#weaknesses)
-

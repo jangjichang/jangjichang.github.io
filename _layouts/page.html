@@ -2,6 +2,12 @@
 layout: default
 ---
 
-{% unless page.hide_title %}<h1>{{ page.title }}</h1>{% endunless %}
-
-{{ content }}
+<article class="page">
+  {% unless page.hide_title %}
+    <header class="page-header">
+      <p class="eyebrow">JICHANG JANG / PAGE</p>
+      <h1>{{ page.title }}</h1>
+    </header>
+  {% endunless %}
+  {{ content }}
+</article>

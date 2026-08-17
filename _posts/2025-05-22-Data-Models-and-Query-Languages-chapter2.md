@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2장 데이터 모델과 질의 언어"
-category: book
+category: engineering
 tags: ["designing-data-intensive-applications", 'data-engineering']
 ---
 <!-- TOC -->

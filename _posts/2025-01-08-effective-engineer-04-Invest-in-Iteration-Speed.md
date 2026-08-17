@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "반복속도에 투자하라"
-category: book
+category: reading-notes
 tags: ["effective-engineer"] 
 ---
 서평: 평소에 반복 속도를 높이기 위해 노력하고 있었는데, 조금 더 구체적인 방법과 측정 방법에 대해 알게 되었다.

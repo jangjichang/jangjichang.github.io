@@ -1,32 +1,23 @@
 ---
 layout: default
-title: "All Categories"
+title: "Sections"
 permalink: /categories/
 ---
 
-<h1>{{ page.title }}</h1>
+<header class="archive-header archive-header--index">
+  <div><p class="eyebrow">EDITORIAL DIRECTORY</p><h1>SECTIONS</h1></div>
+  <p class="archive-description">세 갈래로 정리한 기록의 인덱스.<br><span>SYSTEMS / BOOKS / CULTURE</span></p>
+</header>
 
-{% assign temp_categories = "" | split: "" %}
-{% for category in site.categories %}
-    {% capture category_size %}{{ category[1].size }}{% endcapture %}
-    {% capture category_name %}{{ category[0] }}{% endcapture %}
+<div class="category-grid category-grid--directory">
+  {%- for section in site.data.categories.sections -%}
+    {%- assign section_posts = site.categories[section.slug] -%}
+    <a href="{{ '/categories/' | append: section.slug | append: '/' | relative_url }}" class="category-card">
+      <span class="category-index">{{ section.index }}</span>
+      <div><h2>{{ section.title }}</h2><p>{{ section.description }}</p></div>
+      <span class="category-count">{{ section_posts.size | prepend: '0' | slice: -2, 2 }} ARTICLES ↗</span>
+    </a>
+  {%- endfor -%}
+</div>
 
-    {% capture temp_category %}{{ category_size }}|{{ category_name }}{% endcapture %}
-    {% assign temp_categories = temp_categories | push: temp_category %}
-{% endfor %}
-
-{% assign sorted_categories = temp_categories | sort | reverse %}
-
-{% if sorted_categories %}
-<ul>
-{% for temp_category in sorted_categories %}
-    {% assign category_parts = temp_category | split: '|' %}
-    {% assign category_name = category_parts[1] %}
-    {% assign category_size = category_parts[0] %}
-    <li>
-        <a href="{{ site.baseurl }}/categories/{{ category_name | slugify }}">{{ category_name }}</a>
-        <span>({{ category_size }} posts)</span>
-    </li>
-{% endfor %}
-</ul>
-{% endif %}
+<a class="index-jump" href="{{ '/tags/' | relative_url }}"><span>DETAILED INDEX</span><strong>ALL TAGS</strong><span>EXPLORE ↗</span></a>
