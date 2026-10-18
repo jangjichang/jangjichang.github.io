@@ -9,3 +9,7 @@ featured:
   - title: 데이터 중심 애플리케이션
     tag: designing-data-intensive-applications
     description: "신뢰성·확장성·유지보수성을 갖춘 시스템은 어떻게 만들까. 『Designing Data-Intensive Applications』를 읽으며 정리한 기록입니다."
+
+  - title: AWS 비용 점검
+    tag: aws-cost-optimization
+    description: "DevOps 담당자가 없는 팀에서 빠르게 개발하며 놓친 인프라를 비용 관점에서 되돌아본 기록입니다. 14가지 작업으로 월 약 $2,500을 줄인 과정을 주제별로 정리합니다."
