@@ -7,3 +7,11 @@ vendor
 Gemfile.lock
 .idea
 .ruby-version
+
+# Local notes
+CLAUDE.md
+.claude/
+_writing/
+_workspace/
+_workspace_prev/
+
