@@ -8,6 +8,10 @@ Gemfile.lock
 .idea
 .ruby-version
 
+# Generated share images (scripts/generate_og_images.rb)
+.og-cache/
+assets/og/
+
 # Local notes
 CLAUDE.md
 .claude/

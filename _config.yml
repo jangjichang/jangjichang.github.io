@@ -30,6 +30,17 @@ theme_config:
 sass:
   style: :compressed
 
+# 링크 공유 썸네일(og:image). 글 front matter에 image를 쓰면 그 글만 덮어쓴다.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/img/og-default.png
+        width: 1200
+        height: 630
+        alt: "JI.CHANG — Engineering Notes"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
