@@ -4,6 +4,9 @@ cat:
 tag:
 	ruby scripts/generate_tag_pages.rb
 
+og:
+	ruby scripts/generate_og_images.rb
+
 up:
 	bundle exec jekyll serve
 

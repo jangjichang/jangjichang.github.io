@@ -43,6 +43,10 @@ jobs:
         run: ruby scripts/generate_category_pages.rb
         continue-on-error: true  # 스크립트가 없는 경우 계속 진행
 
+      - name: Generate OG Images
+        run: ruby scripts/generate_og_images.rb
+        continue-on-error: true  # 실패하면 기본 썸네일(assets/img/og-default.png)로 배포
+
       - name: Build Site
         run: bundle exec jekyll build
         env:

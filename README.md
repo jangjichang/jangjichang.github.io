@@ -41,6 +41,9 @@ make new title="My New Post"
 make cat
 make tag
 
+# 글별 공유 썸네일 생성 (배포 시 CI가 자동 실행)
+make og
+
 # 배포용 정적 빌드 확인
 bundle exec jekyll build
 ```
@@ -54,7 +57,8 @@ _includes/    Reusable templates
 _sass/        Editorial design system
 _data/        Navigation and category data
 assets/       Styles and static assets
-scripts/      Category and tag generators
+scripts/      Category, tag, and share image generators
+_plugins/     Build-time hooks (share image linking)
 ```
 
 `master` 브랜치에 반영된 변경사항은 GitHub Pages를 통해 자동으로 배포됩니다.
