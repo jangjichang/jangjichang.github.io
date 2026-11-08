@@ -13,3 +13,7 @@ featured:
   - title: AWS 비용 점검
     tag: aws-cost-optimization
     description: "DevOps 담당자가 없는 팀에서 빠르게 개발하며 놓친 인프라를 비용 관점에서 되돌아본 기록입니다. 14가지 작업으로 월 약 $2,500을 줄인 과정을 주제별로 정리합니다."
+
+  - title: 재고 관리로 알아보는 동시성 제어
+    tag: concurrency-control
+    description: "재고 1개에 주문이 동시에 몰리는 상황을 PostgreSQL에서 직접 재현하며 트랜잭션, 락, 격리 수준을 하나씩 확인하는 연재입니다."
